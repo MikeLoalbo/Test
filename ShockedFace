@@ -1,0 +1,32 @@
+package shapes;
+
+import java.awt.*;
+
+public class ShockedFace {
+
+	public static void main(String[] args) {
+		DrawableObjectList objList = new DrawableObjectList();
+		DrawingTablet tablet = new DrawingTablet("ShockedFace", 200, 200, objList);
+
+		Circle head = new Circle(100, 100, 100, Color.yellow);
+		objList.addDrawable(head);
+
+		Circle leftEye = new Circle(65, 70, 25, Color.white);
+		objList.addDrawable(leftEye);
+
+		Circle leftPupil = new Circle(65, 70, 10, Color.black);
+		objList.addDrawable(leftPupil);
+
+		Circle rightEye = new Circle(135, 70, 25, Color.white);
+		objList.addDrawable(rightEye);
+
+		Circle rightPupil = new Circle(135, 70, 10, Color.black);
+		objList.addDrawable(rightPupil);
+
+		Circle mouth = new Circle(100, 140, 40, Color.black);
+		objList.addDrawable(mouth);
+
+		tablet.repaint();
+
+	}
+}
